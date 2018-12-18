@@ -1,0 +1,80 @@
+<!-- BEGIN FOOTER // -->
+<tr>
+    <td valign="top"
+        class="section section--footer text-container text-container--small">
+        <!-- BEGIN MODULE: STANDARD FOOTER // -->
+        <table border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%">
+            <tbody>
+                <tr>
+                    <td valign="top"
+                        class="section section--spacing-small"
+                        align="center">
+                        <a href="https://www.textup.org"
+                            alt="Visit website"
+                            class="inline-link"><img src="https://gallery.mailchimp.com/188b910ba70aca78678e445fc/images/930cc78b-d2c3-4e94-8d30-177943a7cabb.jpg"
+                                style="max-width:{{ site.style.width.footer_icon }}px;"></a>
+                        <a href="mailto:connect@textup.org"
+                            alt="Email us"
+                            class="inline-link"><img src="https://gallery.mailchimp.com/188b910ba70aca78678e445fc/images/93b60693-3696-4a48-8e1f-4d41d8bc73c8.jpg"
+                                style="max-width:{{ site.style.width.footer_icon }}px;"></a>
+                        <a href="https://www.textup.org/support"
+                            alt="Support center"
+                            class="inline-link"><img src="https://gallery.mailchimp.com/188b910ba70aca78678e445fc/images/e8664cd3-babe-4b12-89a0-b0aebd8c70d7.jpg"
+                                style="max-width:{{ site.style.width.footer_icon }}px;"></a>
+                    </td>
+                </tr>
+                *|IF:LIST|*
+                    <tr>
+                        <td class="section section--spacing-small"
+                            valign="top"
+                            align="center">
+                            *|LIST:DESCRIPTION|*
+                        </td>
+                    </tr>
+                *|END:IF|*
+                <tr>
+                    <td class="section section--spacing-small"
+                        valign="top"
+                        align="center">
+                        *|IF:LIST|*
+                            <em>Our mailing address is</em>:
+                            *|HTML:LIST_ADDRESS_HTML|*
+                        *|ELSE:|*
+                            <em>Our mailing address is</em>:
+                            *|USER:ADDRESS_HTML|*
+                        *|END:IF|*
+                    </td>
+                </tr>
+                *|IF:REWARDS|*
+                    <tr>
+                        <td class="section section--spacing-small"
+                            valign="top"
+                            align="center">
+                            *|HTML:REWARDS|*
+                        </td>
+                    </tr>
+                *|END:IF|*
+                <tr>
+                    <td valign="top"
+                        align="center"
+                        class="section section--spacing-small">
+                        <a class="inline-link inline-link--full-line" href="*|UNSUB|*">unsubscribe from this list</a>
+                        <span class="hide--mobile">|</span>
+                        <a class="inline-link inline-link--full-line"
+                            href="*|UPDATE_PROFILE|*">update subscription preferences
+                        </a>
+                        <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                            <span class="hide--mobile">|</span>
+                            <a class="inline-link inline-link--full-line" href="*|ARCHIVE|*">view email in browser</a>
+                        <!-- *|END:IF|* -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- // BEGIN MODULE: STANDARD FOOTER -->
+    </td>
+</tr>
+<!-- // END FOOTER -->

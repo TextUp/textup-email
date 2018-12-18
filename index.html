@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<table align="center"
+    border="0"
+    cellpadding="0"
+    cellspacing="0"
+    height="100%"
+    width="100%"
+    class="body">
+    <tr>
+        <td align="center"
+            valign="top"
+            class="body__container">
+            <!-- BEGIN TEMPLATE // -->
+            <!-- [if gte mso 9]>
+            <table align="center"
+                border="0"
+                cellspacing="0"
+                cellpadding="0"
+                width="{{ site.style.width.overall }}"
+                style="width:{{ site.style.width.overall }}px;">
+            <tr>
+            <td align="center"
+                valign="top"
+                width="{{ site.style.width.overall }}"
+                style="width:{{ site.style.width.overall }}px;">
+            <![endif] -->
+            <table border="0"
+                cellpadding="0"
+                cellspacing="0"
+                width="100%"
+                class="body__container__container">
+                {%- include preheader.html -%}
+                {%- include header.html -%}
+                {%- include components.html -%}
+                {%- include footer.html -%}
+            </table>
+            <!-- [if gte mso 9]>
+            </td>
+            </tr>
+            </table>
+            <![endif] -->
+            <!-- // END TEMPLATE -->
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,65 @@
+<tr mc:repeatable="base"
+    mc:variant="Two Column Image Left">
+    <td valign="top"
+        class="section section--spacing-small section--two-columns text-container">
+        <table border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%">
+            <tbody>
+                <tr>
+                    <td valign="top">
+                        <!-- [if mso]>
+                        <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                        <tr>
+                        <td valign="top"
+                            width="{{ site.style.width.two_column_secondary }}"
+                            style="width:{{ site.style.width.two_column_secondary }}px;">
+                        <![endif] -->
+                        <table align="right"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            class="section__column section__column--secondary section__column--mobile-stacked-top">
+                            <tbody>
+                                <tr>
+                                    <td valign="top"
+                                        mc:edit="two_column_right_text">
+                                        Paragraph text here
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- [if mso]>
+                        </td>
+                        <td valign="top"
+                            width="{{ site.style.width.two_column_primary }}"
+                            style="width:{{ site.style.width.two_column_primary }}px;">
+                        <![endif] -->
+                        <table align="left"
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            class="section__column section__column--primary image-container image-container--with-border image-container--primary-column">
+                            <tbody>
+                                <tr>
+                                    <td valign="top">
+                                        <img mc:edit="two_column_left_image"
+                                            src="https://via.placeholder.com/{{ site.style.width.two_column_primary }}x150&text=Select+image">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- [if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif] -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>

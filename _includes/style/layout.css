@@ -1,0 +1,96 @@
+/**
+ * Body
+ */
+
+body, .body, .body__container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: {{ site.style.color.white }};
+}
+.body__container {
+    padding: {{ site.style.spacing.small }};
+}
+.body__container__container {
+    max-width: {{site.style.width.overall}}px !important;
+    border: 0;
+}
+
+/**
+ * Sections
+ */
+
+.section {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 0;
+    padding-right: {{ site.style.spacing.medium }};
+    padding-left: {{ site.style.spacing.medium }};
+}
+.section--align-center {
+    text-align: center;
+}
+.section--bg-brand {
+    color: {{ site.style.color.white }};
+    background-color: {{ site.style.color.brand }};
+    border-radius: 3px;
+}
+.section--narrow {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.section--header{
+    border-bottom: 1px solid {{ site.style.color.dark_gray }};
+    padding-top: {{ site.style.spacing.large }};
+    padding-bottom: {{ site.style.spacing.medium }};
+    text-align: center;
+}
+.section--footer {
+    border-top: 1px solid {{ site.style.color.dark_gray }};
+    border-bottom: 0;
+    padding-top: {{ site.style.spacing.medium }};
+    padding-bottom: {{ site.style.spacing.large }};
+    text-align: center;
+}
+.section--spacing-small {
+    padding-top: {{ site.style.spacing.small }};
+    padding-bottom: {{ site.style.spacing.small }};
+}
+.section--spacing-medium {
+    padding-top: {{ site.style.spacing.medium }};
+    padding-bottom: {{ site.style.spacing.medium }};
+}
+.section--two-columns {
+    padding-right: {{ site.style.width.two_column_padding }}px;
+    padding-left: {{ site.style.width.two_column_padding }}px;
+}
+
+.section__column td {
+    padding: 0 {{ site.style.width.two_column_padding }}px;
+}
+.section__column--primary {
+    width: {{ site.style.width.two_column_primary }}px;
+}
+.section__column--secondary {
+    width: {{ site.style.width.two_column_secondary }}px;
+}
+
+@media only screen and (max-width: {{ site.style.breakpoint.mobile }}) {
+    .section {
+        display: block !important;
+    }
+    .section--narrow {
+        padding-right: {{ site.style.spacing.medium }};
+        padding-left: {{ site.style.spacing.medium }};
+    }
+    .section__column {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .section__column--mobile-stacked-top {
+        margin-bottom: {{ site.style.spacing.small }};
+    }
+}

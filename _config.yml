@@ -1,0 +1,77 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: "TextUp email template"
+email: connect@textup.org
+description: "Customizabe marketing email template for MailChimp"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: ericbai
+
+# use inline css for styling instead of sass, so define styling variables here
+style:
+  color:
+    white: "#ffffff"
+    lighter_gray: "#dadada"
+    light_gray: "#c2c2c2"
+    gray: "#777677"
+    dark_gray: "#595859"
+    brand: "#50a4d9"
+  font_family: "tahoma,geneva,sans-serif"
+  font_size:
+    mobile:
+      small_text: "12px"
+      text: "14px"
+      h1: "28px"
+      h2: "18px"
+    desktop:
+      small_text: "12px"
+      text: "14px"
+      h1: "36px"
+      h2: "22px"
+  breakpoint:
+    mobile: "480px"
+  width: # in pixels, don't add units because we use these in attributes, which don't have units
+    overall: 600
+    full_width: 564 # 384px + 180px
+    logo: 90
+    footer_icon: 40
+    number_icon: 25
+    # 384px + 180px + (9px * 2 sides * 2 columns) = 600px
+    two_column_primary: 384
+    two_column_secondary: 180
+    two_column_padding: 9
+  spacing:
+      large: "27px"
+      medium: "18px"
+      small: "9px"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
