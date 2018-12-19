@@ -29,6 +29,7 @@ style:
     gray: "#777677"
     dark_gray: "#595859"
     brand: "#50a4d9"
+    dark_brand: "#145571"
   font_family: "tahoma,geneva,sans-serif"
   font_size:
     mobile:

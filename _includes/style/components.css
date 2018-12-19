@@ -46,12 +46,13 @@
     border-radius: 3px;
     background-color: {{ site.style.color.brand }};
 }
+/*Darken border colors so buttons aren't confused by call-to-action boxes*/
 .button-container__button,
 a.button-container__button {
     display: block;
     padding: 12px 18px;
     border-radius: 3px;
-    border: 1px solid {{ site.style.color.brand }};
+    border: 1px solid {{ site.style.color.dark_brand }};
     color: {{ site.style.color.white }};
     text-decoration: none;
     text-decoration: none;
@@ -62,7 +63,7 @@ a.button-container__button {
 }
 .button-container--light .button-container__button,
 .button-container--light a.button-container__button {
-    border: 1px solid {{ site.style.color.white }};
+    border: 1px solid {{ site.style.color.dark_brand }};
     color: {{ site.style.color.dark_gray }};
 }
 @media only screen and (max-width: {{ site.style.breakpoint.mobile }}) {
