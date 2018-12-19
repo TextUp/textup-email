@@ -27,8 +27,6 @@ body, .body, .body__container {
     background-position: center;
     background-size: cover;
     border: 0;
-    padding-right: {{ site.style.spacing.medium }};
-    padding-left: {{ site.style.spacing.medium }};
 }
 .section--align-center {
     text-align: center;
@@ -38,7 +36,13 @@ body, .body, .body__container {
     background-color: {{ site.style.color.brand }};
     border-radius: 3px;
 }
-.section--narrow {
+.section,
+.section .section {
+    padding-right: {{ site.style.spacing.medium }};
+    padding-left: {{ site.style.spacing.medium }};
+}
+.section--narrow,
+.section .section--narrow {
     padding-right: 100px;
     padding-left: 100px;
 }
@@ -55,15 +59,34 @@ body, .body, .body__container {
     padding-bottom: {{ site.style.spacing.large }};
     text-align: center;
 }
-.section--spacing-small {
+.section--spacing-small-top,
+.section .section--spacing-small-top {
+    padding-top: {{ site.style.spacing.small }};
+}
+.section--spacing-small-bottom,
+.section .section--spacing-small-bottom {
+    padding-bottom: {{ site.style.spacing.small }};
+}
+.section--spacing-small,
+.section .section--spacing-small {
     padding-top: {{ site.style.spacing.small }};
     padding-bottom: {{ site.style.spacing.small }};
 }
-.section--spacing-medium {
+.section--spacing-medium-top,
+.section .section--spacing-medium-top {
+    padding-top: {{ site.style.spacing.medium }};
+}
+.section--spacing-medium-bottom,
+.section .section--spacing-medium-bottom {
+    padding-bottom: {{ site.style.spacing.medium }};
+}
+.section--spacing-medium,
+.section .section--spacing-medium {
     padding-top: {{ site.style.spacing.medium }};
     padding-bottom: {{ site.style.spacing.medium }};
 }
-.section--two-columns {
+.section--two-columns,
+.section .section--two-columns {
     padding-right: {{ site.style.width.two_column_padding }}px;
     padding-left: {{ site.style.width.two_column_padding }}px;
 }
@@ -77,14 +100,22 @@ body, .body, .body__container {
 .section__column--secondary {
     width: {{ site.style.width.two_column_secondary }}px;
 }
+.section__column--equal {
+    width: {{ site.style.width.two_column_equal }}px;
+}
 
 @media only screen and (max-width: {{ site.style.breakpoint.mobile }}) {
     .section {
         display: block !important;
     }
-    .section--narrow {
+    .section--narrow,
+    .section .section--narrow {
         padding-right: {{ site.style.spacing.medium }};
         padding-left: {{ site.style.spacing.medium }};
+    }
+    .section--mobile-spacing--small-top,
+    .section .section--mobile-spacing--small-top {
+        padding-top: {{ site.style.spacing.small }};
     }
     .section__column {
         max-width: 100% !important;

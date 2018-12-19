@@ -53,6 +53,7 @@ style:
     two_column_primary: 384
     two_column_secondary: 180
     two_column_padding: 9
+    two_column_equal: 291
   spacing:
       large: "27px"
       medium: "18px"

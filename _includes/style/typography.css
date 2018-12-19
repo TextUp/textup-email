@@ -20,7 +20,8 @@
     color: {{ site.style.color.gray }};
     font-size: {{ site.style.font_size.desktop.small_text }};
 }
-.text-container--light {
+.text-container--light,
+.text-container--light p {
     color: {{ site.style.color.white }};
 }
 
