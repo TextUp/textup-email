@@ -1,55 +1,48 @@
 <tr mc:repeatable="base"
     mc:variant="Call to Action">
     <td valign="top"
-        class="section section--spacing-small">
+        class="section section--container">
         <table width="100%"
             border="0"
             cellspacing="0"
-            cellpadding="0"
-            class="section--bg-brand">
-            <tr>
-                <td align="center"
-                    valign="top"
-                    class="section section--narrow section--spacing-medium-top section--spacing-small-bottom">
-                    <h2 class="heading heading--light heading--2" mc:edit="call_to_action_title">
-                        Title here
-                    </h2>
-                </td>
-            </tr>
-            <tr>
-                <td valign="top"
-                    class="section section--spacing-small text-container text-container--light"
-                    mc:edit="call_to_action_text"
-                    mc:hideable>
-                    Paragraph text here
-                </td>
-            </tr>
-            <tr>
-                <td align="center"
-                    valign="top"
-                    class="section section--narrow section--spacing-medium-bottom section--spacing-small-top text-container">
-                    <table border="0"
-                        cellspacing="0"
-                        cellpadding="0"
-                        align="center"
-                        class="button-container button-container--light">
-                        <tbody>
-                            <tr>
-                                <td align="center"
-                                    class="button-container__border"
-                                    mc:edit="call_to_action_button_text">
-                                    <a href="https://www.example.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="button-container__button">
-                                        Button text here
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
+            cellpadding="0">
+            <tbody>
+                <tr>
+                    <td valign="top"
+                        class="section section--filled-container section--bg-brand">
+                        <h2 class="heading heading--align-center heading--light heading--2" mc:edit="call_to_action_title">
+                            Title here
+                        </h2>
+                        <p class="section__content text-container text-container--light"
+                            mc:edit="call_to_action_text"
+                            mc:hideable>
+                            Paragraph text here
+                        </p>
+                        <div class="section__content">
+                            <table border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                align="center"
+                                class="button-container button-container--light">
+                                <tbody>
+                                    <tr>
+                                        <td align="center"
+                                            class="button-container__border"
+                                            mc:edit="call_to_action_button_text">
+                                            <a href="https://www.example.com"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="button-container__button">
+                                                Button text here
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </td>
 </tr>

@@ -23,3 +23,4 @@ Generates inlined HTML for TextUp marketing email template for MailChimp. Uses P
 * [Automated email testing tool with some coverage of major email clients](http://www.inboxinspector.com/)
 * [MailChimp email design/programming tips](https://templates.mailchimp.com/)
 * [MailChimp templating language guide](https://templates.mailchimp.com/getting-started/template-language/)
+* [Campaign Monitor css support guide for email clients](https://www.campaignmonitor.com/css/)

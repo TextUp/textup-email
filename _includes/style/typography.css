@@ -25,6 +25,15 @@
     color: {{ site.style.color.white }};
 }
 
+/*so that links added after the fact will still pick up styles*/
+@media only screen and (min-width: 0px) {
+    .text-container a,
+    .text-container p a {
+        color: {{ site.style.color.brand }};
+        font-weight: normal;
+        text-decoration: underline;
+    }
+}
 @media only screen and (max-width: {{ site.style.breakpoint.mobile }}) {
     .text-container,
     .text-container p {
@@ -54,7 +63,10 @@
     text-align: center;
 }
 .heading--spacing-tight {
-    line-height: 75%;
+    line-height: 120%;
+}
+.heading--spacing-tighter {
+    line-height: 100%;
 }
 .heading--light {
     color: {{ site.style.color.white }};
@@ -71,6 +83,9 @@
         line-height: 175% !important;
     }
     .heading--spacing-tight {
+        line-height: 120% !important;
+    }
+    .heading--spacing-tighter {
         line-height: 100% !important;
     }
     .heading--1 {

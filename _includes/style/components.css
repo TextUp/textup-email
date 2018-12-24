@@ -4,8 +4,6 @@
 
 .divider-container {
     max-width: 100%;
-    padding-top: {{ site.style.spacing.small }};
-    padding-bottom: {{ site.style.spacing.small }};
 }
 .divider-container__divider {
     border-top: 1px solid {{ site.style.color.light_gray }};
@@ -16,12 +14,11 @@
  */
 
 /*MailChimp strips classes from editable images so apply class to parent*/
+/*Do not add border or else you need to subtract 2px from the width order to prevent a line break
+because email clients have poor support for `box-sizing: border-box;` */
 .image-container img {
     height: auto;
     width: {{ site.style.width.full_width }}px;
-}
-.image-container--with-border img {
-    border: 1px solid {{ site.style.color.lighter_gray }};
 }
 .image-container--primary-column img {
     width: {{ site.style.width.two_column_primary }}px;

@@ -46,19 +46,18 @@ style:
     mobile: "480px"
   width: # in pixels, don't add units because we use these in attributes, which don't have units
     overall: 600
-    full_width: 564 # 384px + 180px
+    full_width: 552 # = 600px - 24px - 24px
     logo: 90
     footer_icon: 40
     number_icon: 25
-    # 384px + 180px + (9px * 2 sides * 2 columns) = 600px
-    two_column_primary: 384
-    two_column_secondary: 180
-    two_column_padding: 9
-    two_column_equal: 291
+    two_column_primary: 372
+    two_column_secondary: 164 # = 180px - 16px spacing between columns
+    two_column_equal: 276 # = 552px / 2
   spacing:
-      large: "27px"
-      medium: "18px"
-      small: "9px"
+      xlarge: "32px"
+      large: "24px" # between containers
+      medium: "16px" # for filled containers
+      small: "8px" # within content
 
 # Build settings
 markdown: kramdown

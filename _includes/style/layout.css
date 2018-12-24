@@ -21,72 +21,46 @@ body, .body, .body__container {
  * Sections
  */
 
-.section,
-.section .section {
+.section {
     border: 0;
-    padding-right: {{ site.style.spacing.medium }};
-    padding-left: {{ site.style.spacing.medium }};
+    padding-right: {{ site.style.spacing.large }};
+    padding-left: {{ site.style.spacing.large }};
+}
+.section--bg-brand {
+    border-radius: 3px;
+    color: {{ site.style.color.white }};
+    background-color: {{ site.style.color.brand }};
 }
 .section--align-center {
     text-align: center;
 }
-.section--bg-brand {
-    color: {{ site.style.color.white }};
-    background-color: {{ site.style.color.brand }};
-    border-radius: 3px;
-}
-.section--narrow,
-.section .section--narrow {
+.section--narrow {
     padding-right: 100px;
     padding-left: 100px;
 }
 .section--header{
     border-bottom: 1px solid {{ site.style.color.dark_gray }};
-    padding-top: {{ site.style.spacing.large }};
-    padding-bottom: {{ site.style.spacing.medium }};
+    padding-top: {{ site.style.spacing.xlarge }};
+    padding-bottom: {{ site.style.spacing.large }};
     text-align: center;
 }
 .section--footer {
     border-top: 1px solid {{ site.style.color.dark_gray }};
     border-bottom: 0;
-    padding-top: {{ site.style.spacing.medium }};
-    padding-bottom: {{ site.style.spacing.large }};
+    padding-top: {{ site.style.spacing.large }};
+    padding-bottom: {{ site.style.spacing.xlarge }};
     text-align: center;
 }
-.section--spacing-small-top,
-.section .section--spacing-small-top {
-    padding-top: {{ site.style.spacing.small }};
+.section--container {
+    padding-top: {{ site.style.spacing.large }};
 }
-.section--spacing-small-bottom,
-.section .section--spacing-small-bottom {
-    padding-bottom: {{ site.style.spacing.small }};
-}
-.section--spacing-small,
-.section .section--spacing-small {
-    padding-top: {{ site.style.spacing.small }};
-    padding-bottom: {{ site.style.spacing.small }};
-}
-.section--spacing-medium-top,
-.section .section--spacing-medium-top {
-    padding-top: {{ site.style.spacing.medium }};
-}
-.section--spacing-medium-bottom,
-.section .section--spacing-medium-bottom {
-    padding-bottom: {{ site.style.spacing.medium }};
-}
-.section--spacing-medium,
-.section .section--spacing-medium {
+.section--filled-container {
+    margin-top: {{ site.style.spacing.large }};
     padding-top: {{ site.style.spacing.medium }};
     padding-bottom: {{ site.style.spacing.medium }};
 }
-.section--two-columns,
-.section .section--two-columns {
-    padding-right: {{ site.style.width.two_column_padding }}px;
-    padding-left: {{ site.style.width.two_column_padding }}px;
-}
-
-.section__column td {
-    padding: 0 {{ site.style.width.two_column_padding }}px;
+.section__content {
+    padding-top: {{ site.style.spacing.small }};
 }
 .section__column--primary {
     width: {{ site.style.width.two_column_primary }}px;
@@ -101,19 +75,27 @@ body, .body, .body__container {
 @media only screen and (max-width: {{ site.style.breakpoint.mobile }}) {
     .section {
         display: block !important;
+        padding-right: {{ site.style.spacing.small }} !important;
+        padding-left: {{ site.style.spacing.small }} !important;
     }
-    .section--narrow,
-    .section .section--narrow {
-        padding-right: {{ site.style.spacing.medium }} !important;
+    .section.section--filled-container {
         padding-left: {{ site.style.spacing.medium }} !important;
+        padding-right: {{ site.style.spacing.medium }} !important;
     }
-    .section--mobile-spacing--small-top,
-    .section .section--mobile-spacing--small-top {
-        padding-top: {{ site.style.spacing.small }} !important;
+    .section--narrow {
+        padding-right: {{ site.style.spacing.small }} !important;
+        padding-left: {{ site.style.spacing.small }} !important;
     }
     .section__column {
         max-width: 100% !important;
         width: 100% !important;
+    }
+
+    .section--mobile-filled-container-top {
+        padding-top: 0 !important;
+    }
+    .section--filled-container {
+        margin-top: 0 !important;
     }
     .section__column--mobile-stacked-top {
         margin-bottom: {{ site.style.spacing.small }} !important;
